@@ -1,0 +1,89 @@
+/*!
+ * Start Bootstrap - Blog Post (https://startbootstrap.com/template-overviews/blog-post)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-blog-post/blob/master/LICENSE)
+ */
+
+body {
+  padding-top: 76px;
+  background-color: #ddd;
+}
+
+.header {
+	max-height: 60px;
+	box-sizing: content-box;
+}
+
+.header a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+.header-logo {
+	height: 50px;
+	width: 50px;
+	padding: 5px;
+	border: 1px solid #FFF;
+	border-radius: 10px;
+	margin-right: 10px;
+	vertical-align: sub;
+}
+
+.header-title {
+	font-size: 40px;
+}
+
+.bg-bolk {
+	background-color: #80090c;
+	box-shadow: 0 0px 5px 1px rgba(0,0,0,0.5);
+}
+
+#page-top {
+	display: block;
+	margin: 0 auto 15px auto;
+	max-width: 1024px;
+	background-color: #fff;
+}
+
+#page-top p {
+	text-align: center;
+	font-weight: 500;
+	font-size: 1.5em;
+	padding: 10px 0;
+	border: 1px solid #bbb;
+	margin-top: -1px;
+}
+
+#bolkvlag {
+/*	width: 100%;*/
+	display: block;
+	margin: 0 auto;
+}
+
+.author {
+	margin: 10px 0;
+}
+
+.content {
+	background-color: #fff;
+	padding: 0px 20px;
+	border: 1px solid #bbb;
+}
+
+img {
+	vertical-align: sub;
+}
+
+p {
+	margin: 0;
+}
+
+footer {
+	margin-top: 15px;
+}
+
+@media (min-width: 960px) {
+  body {
+    padding-top: 76px;
+  }
+}

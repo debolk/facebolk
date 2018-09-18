@@ -3,6 +3,10 @@
  * Copyright 2013-2017 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-blog-post/blob/master/LICENSE)
  */
+:root {
+ --bolk-color: #80090c;
+ --bolk-dark: #66080b;
+}
 
 body {
   padding-top: 76px;
@@ -15,7 +19,7 @@ body {
 }
 
 .header a {
-	color: #FFF;
+	color: #fff;
 	text-decoration: none;
 }
 
@@ -23,9 +27,9 @@ body {
 	height: 50px;
 	width: 50px;
 	padding: 5px;
-	border: 1px solid #FFF;
+	border: 1px solid #fff;
 	border-radius: 10px;
-	margin-right: 10px;
+	/*margin-right: 10px;*/
 	vertical-align: sub;
 }
 
@@ -33,9 +37,24 @@ body {
 	font-size: 40px;
 }
 
+.header-user {
+	font-size: 1.5em;
+	font-weight: 600;
+	display: flex;
+	align-items:center;
+}
+
 .bg-bolk {
-	background-color: #80090c;
+	background-color: var(--bolk-color);
 	box-shadow: 0 0px 5px 1px rgba(0,0,0,0.5);
+}
+
+.center-page-element {
+
+}
+
+.navbar .container{
+	min-height: 0;
 }
 
 #page-top {
@@ -60,14 +79,125 @@ body {
 	margin: 0 auto;
 }
 
+.container{
+	min-height: calc(100vh - 147px);
+}
+
+.content {
+	max-width: 1024px;
+	margin: 0 auto;
+	min-height: calc(100vh - 50px);
+}
+
+.post-input {
+	resize: none;
+	border-width: 0px;
+}
+
+.post-input:focus {
+	box-shadow: none;
+}
+
+.post-input:focus::placeholder {
+	color: #bbb;
+}
+
+.bolk-button {
+	background-color: var(--bolk-color);
+	border-radius: 8px;
+	border: 2px solid var(--bolk-dark);
+	color: white;
+	font-weight: 600;
+}
+
+.bolk-button:hover {
+	background-color: var(--bolk-dark);
+}
+
 .author {
 	margin: 10px 0;
 }
 
-.content {
+.poster-name {
+	font-weight: 600;
+	color: var(--bolk-color);
+	font-size: 1.5em;
+}
+
+.post {
 	background-color: #fff;
-	padding: 0px 20px;
+	padding: 10px 20px;
 	border: 1px solid #bbb;
+	max-width: 1024px;
+	margin: 0 0 15px 0;
+}
+
+.post hr {
+	margin: 5px 0px;
+}
+
+.post-body {
+	margin: 10px 0px;
+}
+
+.hr-full {
+	margin: 5px -15px;
+}
+
+.half-width {
+	
+}
+
+.react a {
+	text-align: center;
+	text-decoration: none;
+	width: 50%;
+	display: inline-block;
+	padding: 5px 0px;
+	font-weight: 500;
+	font-color: #666666;
+}
+
+.react a:hover {
+	background-color: #eee;
+}
+
+.comment-body {
+	background-color: #ddd;
+	border-radius: 10px;
+	padding: 0px 10px 5px 10px;
+}
+
+.commenter-name {
+	font-weight: 600;
+	color: var(--bolk-color);
+}
+
+.comment-react {
+	margin-left: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.comment-section {
+	margin-top: 10px;
+}
+
+.comment-input{
+	background-color: #ddd;
+	border-color: #bbb;
+	border-radius: 20px;
+	height: 40px;
+	margin-bottom: 10px;
+}
+
+.comment-input:focus {
+	box-shadow: none;
+	background-color: #eee;
+	border-color: #bbb;
+}
+
+.comment-input:focus::placeholder {
+	color: #bbb;
 }
 
 img {
@@ -80,6 +210,7 @@ p {
 
 footer {
 	margin-top: 15px;
+	width: 100%;
 }
 
 @media (min-width: 960px) {

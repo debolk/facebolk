@@ -12,6 +12,8 @@
 <!-- Post Content Column -->
         <div class="content">
 
+          @include('posts.write')
+
           @foreach ($posts as $post)
             @include('posts.post')
           @endforeach

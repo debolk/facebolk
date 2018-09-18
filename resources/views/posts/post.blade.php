@@ -1,22 +1,33 @@
-<!-- Title -->
-          
         <div class="post">
           <!-- Author -->
           <div class="author">
-            <img class="mr-3 rounded-circle d-inline-block" src="http://placehold.it/50x50" alt="">
+            <img class="mr-3 rounded-circle d-inline-block" src="/photo/{{ $post->user_id }}" height='48' width='48' alt="{{ $post->user->name }}">
             <div class="d-inline-block">
-              <p><a href="#">{{$post->user->name}}</a></p>
-              <small class="text-muted" style="font-size: 0.8rem">posted on {{ $post->created_at->toDayDateTimeString() }}</small>
+              <p><a href="#" class="poster-name">{{$post->user->name}}</a></p>
+              <small class="text-muted"">Posted on {{ $post->created_at->format('l, j F Y \a\t G:i') }}</small>
             </div>
           </div>
 
-          <hr>
+          <!-- <hr> -->
 
           <!-- Post Content -->
-          <p class="lead">
+          <p class="post-body">
           {{ $post->body }}
           </p>
-          <hr>
 
-          @include('comments')
+          <!-- Reactions -->
+
+
+          <hr>
+          <!-- Like / Comment buttons -->
+          <div class="react">
+            <a href="#" class="half-width">Like
+            </a><a href="javascript:document.getElementById('comment-{{ $post->id }}').focus()" class="half-width">Comment</a>
+          </div>
+
+
+          <hr class="hr-full">
+          <!-- Comments -->
+          @include('comments.comment_section')
+
         </div>

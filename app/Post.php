@@ -7,16 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     // fillable allows mass assignment
-    protected $fillable = ['title', 'body', 'user_id'];
+    protected $fillable = ['body', 'user_id', 'parent'];
 
     public function comments()
     {
-    	return $this->hasMany(Comment::class);
+        $comments = Post::where('parent', $this->id)->get();
+    	return $comments;
     }
 
     public function addComment($body)
     {
-    	$this->comments()->create(compact('body'));
+    	//not yet implemented
     }
 
     public function user()

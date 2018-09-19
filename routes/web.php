@@ -16,6 +16,6 @@ Route::get('/', 'PostController@index')->name('home');
 // Profile picture of a user
 Route::get('/photo/{username}', 'ProfilePictureController@show');
 
-Route::get('/login', 'SessionController@create');
+Route::get('/login', 'SessionController@create')->name('login');
 Route::post('/login', 'SessionController@store');
 Route::get('/logout', 'SessionController@destroy');

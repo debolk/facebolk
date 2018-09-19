@@ -12,9 +12,14 @@
 */
 
 Route::get('/', 'PostController@index')->name('home');
+Route::post('/post', 'PostController@store');
+Route::post('/comment/{post}', 'PostController@comment');
 
 // Profile picture of a user
 Route::get('/photo/{username}', 'ProfilePictureController@show');
+
+// AJAX calls
+Route::get('/ajax/reply/{post_id}', 'PostController@addReplySection');
 
 Route::get('/login', 'SessionController@create')->name('login');
 Route::post('/login', 'SessionController@store');

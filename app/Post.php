@@ -17,7 +17,11 @@ class Post extends Model
 
     public function addComment($body)
     {
-    	//not yet implemented
+    	Post::create([
+            'body' => request('body'),
+            'user_id' => auth()->id(),
+            'parent' => $this->id
+        ]);
     }
 
     public function user()

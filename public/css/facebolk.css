@@ -116,6 +116,7 @@ body {
 
 .author {
 	margin: 10px 0;
+	display: flex;
 }
 
 .poster-name {
@@ -162,10 +163,34 @@ body {
 	background-color: #eee;
 }
 
+.img-profile {
+	display: flex;
+	border-radius: 50%;
+	margin-right: 1em;
+}
+
+.post img.img-profile {
+	width: 48px;
+	height: 48px;
+}
+
+.comment img.img-profile {
+	width: 40px;
+	height: 40px;
+}
+
+.reply img.img-profile{
+	width: 32px;
+	height: 32px;
+}
+
+.comment {
+}
+
 .comment-body {
 	background-color: #ddd;
 	border-radius: 10px;
-	padding: 0px 10px 5px 10px;
+	padding: 2px 10px 2px 10px;
 }
 
 .commenter-name {
@@ -182,11 +207,20 @@ body {
 	margin-top: 10px;
 }
 
-.comment-input{
+.comment-input {
 	background-color: #ddd;
 	border-color: #bbb;
 	border-radius: 20px;
-	height: 40px;
+	height: 32px;
+	margin: 4px 0;
+}
+
+.reply-input {
+	height: 30px;
+	margin: 1px 0;
+}
+
+.reply-form {
 	margin-bottom: 10px;
 }
 

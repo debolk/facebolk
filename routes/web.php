@@ -14,6 +14,7 @@
 Route::get('/', 'PostController@index')->name('home');
 Route::post('/post', 'PostController@store');
 Route::post('/comment/{post}', 'PostController@comment');
+Route::post('/react/{post}', 'ReactionController@react');
 
 // Profile picture of a user
 Route::get('/photo/{username}', 'ProfilePictureController@show');

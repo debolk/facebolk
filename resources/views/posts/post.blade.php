@@ -14,13 +14,13 @@
           </p>
 
           <!-- Reactions -->
-
+          <p class="reactions">👍6❤️5🤣4😮3😢2😡1</p>
 
           <hr>
           <!-- Like / Comment buttons -->
           <div class="react">
-            <a href="#" class="half-width">Like
-            </a><a href="javascript:document.getElementById('comment-{{ $post->id }}').focus()" class="half-width">Comment</a>
+            <form action="/react/{{ $post->id }}" method="POST" class="half-width">{{ csrf_field() }}<input type="hidden" name="type" value="like"><input type="submit" value="Like">
+            </form><a href="javascript:document.getElementById('comment-{{ $post->id }}').focus()" class="half-width">Comment</a>
           </div>
 
           <hr class="hr-full">

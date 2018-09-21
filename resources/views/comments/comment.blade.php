@@ -6,6 +6,7 @@
                 <span class="commenter-name">{{ $comment->user->name }}</span>
                 {{ $comment->body }}
               </div>
+              <p class="reactions small">👍6❤️5🤣4😮3😢2😡1</p>
               <div class="comment-react">
                 <a href="#">Like</a> &middot
                 <a href='#' onclick="return add_reply_section({{ $comment->id }});">Reply</a> &middot

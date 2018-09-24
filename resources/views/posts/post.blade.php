@@ -14,12 +14,15 @@
           </p>
 
           <!-- Reactions -->
-          <p class="reactions">👍6❤️5🤣4😮3😢2😡1</p>
-
+          <div id="reactions-{{ $post->id }}">
+            @if ( $post->reactions()->count() > 0)
+              @include('posts.reactions')
+            @endif
+          </div>
           <hr>
           <!-- Like / Comment buttons -->
           <div class="react">
-            <form action="/react/{{ $post->id }}" method="POST" class="half-width">{{ csrf_field() }}<input type="hidden" name="type" value="like"><input type="submit" value="Like">
+            @include('posts.react_button')
             </form><a href="javascript:document.getElementById('comment-{{ $post->id }}').focus()" class="half-width">Comment</a>
           </div>
 

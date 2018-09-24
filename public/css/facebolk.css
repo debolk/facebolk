@@ -85,6 +85,7 @@ body {
 }
 
 .content {
+	width: 100%;
 	max-width: 1024px;
 	margin: 0 auto;
 	min-height: calc(100vh - 50px);
@@ -175,6 +176,7 @@ body {
 	width: 50%;
 	display: inline-block;
 	padding: 5px 0px;
+	color: var(--bolk-color);
 }
 
 .react form {
@@ -183,7 +185,7 @@ body {
 }
 
 .react input {
-	color: #007bff;
+	color: var(--bolk-color);/*#007bff;*/
 	width: 100%;
 	height: 100%;
 	border-width: 0;
@@ -193,7 +195,18 @@ body {
 
 .react a:hover, .react input:hover {
 	background-color: #eee;
-	color: #0056b3;
+	color: var(--bolk-color);
+}
+
+.react .like {
+	/*background-color: var(--bolk-color);*/
+	color: var(--bolk-dark);
+	font-weight: 900;
+}
+
+.react .like:hover {
+	/*background-color: var(--bolk-dark);*/
+	/*color: var(--bolk-color);*/
 }
 
 .img-profile {

@@ -7,7 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 class Reaction extends Model
 {
 	protected $fillable = ['post_id', 'user_id', 'type'];
-	const allowed_reactions = ['like'];
+	const allowed_reactions = [
+        'like' => '👍', 
+        'love' => '❤', 
+        'haha' => '🤣', 
+        'wow' => '😮', 
+        'sad' => '😢', 
+        'angry' => '😡',
+    ];
 
     public function user()
     {

@@ -11,15 +11,16 @@ class ReactionController extends Controller
 {
     public function react(Post $post)
     {
-    	if (! in_array(request('type'), Reaction::allowed_reactions )){
-    		return "illegal reaction type provided: " . request('type');
+    	if (! array_key_exists(request('type'), Reaction::allowed_reactions )){
+    		return "ERROR: illegal reaction type provided: " . request('type');
     	}
 
     	$reaction = Reaction::where('user_id', auth()->id())->where('post_id', $post->id)->first();
     	if ($reaction)
     	{
     		$reaction->delete();
-    		return "unliked";
+    		// return 'unliked';
+    		return view('posts.react_button', compact('post'));
     	}
 
     	Reaction::create([
@@ -27,6 +28,12 @@ class ReactionController extends Controller
     		'post_id' => $post->id,
     		'type' => request('type')
     	]);
-    	return "liked";
+    	// return 'liked';
+    	return view('posts.react_button', compact('post'));
+    }
+
+    public function reactions(Post $post)
+    {
+    	return view('posts.reactions', compact('post'));
     }
 }

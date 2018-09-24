@@ -33,4 +33,16 @@ class Post extends Model
     {
         return $this->hasMany(Reaction::class);
     }
+
+    public function getReactionStringAttribute()
+    {
+        $reaction_counts = [];
+        foreach (array_keys(Reaction::allowed_reactions) as $reaction_type)
+        {
+            $amount = $this->reactions()->where('type', $reaction_type)->count();
+            if ($amount > 0)
+                $reaction_counts[] = Reaction::allowed_reactions[$reaction_type] . $amount;
+        }
+        return join(" ", $reaction_counts);
+    }
 }

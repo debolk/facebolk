@@ -148,7 +148,6 @@ body {
 }
 
 .half-width {
-	
 }
 
 .reactions {
@@ -169,18 +168,20 @@ body {
 	transform: translateY(12px) translateX(-16px);
 }
 
+.react {
+	display: inline-flex;
+	width: 100%;
+}
 
 .react a{
 	text-align: center;
 	text-decoration: none;
 	width: 50%;
-	display: inline-block;
 	padding: 5px 0px;
 	color: var(--bolk-color);
 }
 
 .react form {
-	display: inline-block;
 	width: 50%;
 }
 

@@ -23,7 +23,7 @@
           <!-- Like / Comment buttons -->
           <div class="react">
             @include('posts.react_button')
-            </form><a href="javascript:document.getElementById('comment-{{ $post->id }}').focus()" class="half-width">Comment</a>
+            <a href="javascript:document.getElementById('comment-{{ $post->id }}').focus()" class="half-width">Comment</a>
           </div>
 
           <hr class="hr-full">
